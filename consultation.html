@@ -2,7 +2,7 @@
 <html class="dark" lang="en">
 <head>
   <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
   <title>1:1 AI Agent Consultation | Build Your First AI Agent — EvoScale</title>
   <meta content="Get a focused 1:1 session where we help you understand how AI can work for your business and guide you through setting up a basic AI agent." name="description"/>
   <meta content="EvoScale AI" name="author"/>
@@ -112,16 +112,20 @@
       scroll-behavior: smooth;
       color-scheme: dark;
     }
+    html, body {
+      overflow-x: hidden;
+      max-width: 100vw;
+      -webkit-tap-highlight-color: transparent;
+    }
     body {
       background-color: #121318;
       color: #e3e1e9;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      overflow-x: hidden;
     }
     
     /* Scroll offset for fixed header */
     section[id], div[id] {
-      scroll-margin-top: 5.5rem;
+      scroll-margin-top: 5rem;
     }
 
     /* Subdued custom scrollbar */
@@ -154,13 +158,13 @@
   </style>
 </head>
 
-<body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col justify-between selection:bg-primary selection:text-surface">
+<body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col justify-between selection:bg-primary selection:text-surface pb-16 sm:pb-0">
 
   <!-- =========================================================================
        HEADER / NAVBAR
        ========================================================================= -->
   <header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-surface-container-high/60 shadow-[0_1px_12px_rgba(0,0,0,0.5)]">
-    <div class="h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3 sm:gap-6">
+    <div class="h-16 sm:h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3 sm:gap-6">
       
       <!-- Brand Logo -->
       <a class="flex items-center shrink-0 group py-1" href="/" onclick="goToHome(event)" aria-label="EvoScale AI">
@@ -183,7 +187,7 @@
 
       <!-- Desktop Header Actions -->
       <div class="hidden sm:flex items-center shrink-0">
-        <a href="https://rzp.io/rzp/8olG0p4" class="relative inline-flex items-center justify-center p-[1px] overflow-hidden rounded-xl group bg-surface-container-high hover:bg-gradient-to-r hover:from-primary-container hover:to-secondary-container transition-all duration-300 shadow-[0_0_20px_rgba(56,189,248,0.15)] cursor-pointer whitespace-nowrap">
+        <a href="https://rzp.io/rzp/8olG0p4" class="relative inline-flex items-center justify-center p-[1px] overflow-hidden rounded-xl group bg-surface-container-high hover:bg-gradient-to-r hover:from-primary-container hover:to-secondary-container transition-all duration-300 shadow-[0_0_20px_rgba(56,189,248,0.15)] cursor-pointer whitespace-nowrap active:scale-95">
           <span class="px-3.5 py-2 rounded-xl bg-surface-container-low group-hover:bg-surface-container-low/90 transition-all text-xs sm:text-sm font-semibold text-on-surface group-hover:text-primary flex items-center gap-1.5 whitespace-nowrap">
             <span>Book 1:1 (₹999)</span>
             <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
@@ -199,22 +203,22 @@
     </div>
 
     <!-- Mobile Drawer Menu -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-surface-container-lowest/95 backdrop-blur-2xl border-b border-surface-container-high px-margin py-space-md transition-all duration-300">
-      <nav class="flex flex-col gap-3" aria-label="Mobile Navigation">
-        <a onclick="closeMobileMenu()" class="font-label-lg text-on-surface-variant hover:text-primary py-2 border-b border-surface-container-high/40" href="/#solutions">Solutions</a>
-        <a onclick="closeMobileMenu()" class="font-label-lg text-primary font-semibold py-2 border-b border-surface-container-high/40" href="#top">1:1 Consultation (Current)</a>
-        <a onclick="closeMobileMenu()" class="font-label-lg text-on-surface-variant hover:text-primary py-2 border-b border-surface-container-high/40" href="#what-happens">What's Included</a>
-        <a onclick="closeMobileMenu()" class="font-label-lg text-on-surface-variant hover:text-primary py-2 border-b border-surface-container-high/40" href="#who-is-this-for">Industries</a>
-        <a onclick="closeMobileMenu()" class="font-label-lg text-on-surface-variant hover:text-primary py-2 border-b border-surface-container-high/40" href="#pricing">Pricing</a>
-        <a onclick="closeMobileMenu()" class="font-label-lg text-on-surface-variant hover:text-primary py-2 border-b border-surface-container-high/40" href="#how-it-works">How It Works</a>
-        <a onclick="closeMobileMenu()" class="font-label-lg text-on-surface-variant hover:text-primary py-2 border-b border-surface-container-high/40" href="#faq">FAQ</a>
+    <div id="mobile-menu" class="hidden lg:hidden bg-surface-container-lowest/98 backdrop-blur-2xl border-b border-surface-container-high px-4 sm:px-margin py-4 transition-all duration-300 shadow-2xl">
+      <nav class="flex flex-col gap-1 text-left" aria-label="Mobile Navigation">
+        <a onclick="closeMobileMenu()" class="font-label-lg text-on-surface-variant hover:text-primary py-2.5 px-2 rounded-lg hover:bg-surface-container-high/40 border-b border-surface-container-high/30" href="/#solutions">Solutions</a>
+        <a onclick="closeMobileMenu()" class="font-label-lg text-primary font-semibold py-2.5 px-2 rounded-lg bg-secondary-container/20 border-b border-surface-container-high/30" href="#top">1:1 Consultation (Current)</a>
+        <a onclick="closeMobileMenu()" class="font-label-lg text-on-surface-variant hover:text-primary py-2.5 px-2 rounded-lg hover:bg-surface-container-high/40 border-b border-surface-container-high/30" href="#what-happens">What's Included</a>
+        <a onclick="closeMobileMenu()" class="font-label-lg text-on-surface-variant hover:text-primary py-2.5 px-2 rounded-lg hover:bg-surface-container-high/40 border-b border-surface-container-high/30" href="#who-is-this-for">Industries</a>
+        <a onclick="closeMobileMenu()" class="font-label-lg text-on-surface-variant hover:text-primary py-2.5 px-2 rounded-lg hover:bg-surface-container-high/40 border-b border-surface-container-high/30" href="#pricing">Pricing</a>
+        <a onclick="closeMobileMenu()" class="font-label-lg text-on-surface-variant hover:text-primary py-2.5 px-2 rounded-lg hover:bg-surface-container-high/40 border-b border-surface-container-high/30" href="#how-it-works">How It Works</a>
+        <a onclick="closeMobileMenu()" class="font-label-lg text-on-surface-variant hover:text-primary py-2.5 px-2 rounded-lg hover:bg-surface-container-high/40 border-b border-surface-container-high/30" href="#faq">FAQ</a>
         
-        <div class="pt-2 flex flex-col gap-2">
-          <a href="https://rzp.io/rzp/8olG0p4" onclick="closeMobileMenu()" class="w-full py-3 rounded-xl bg-gradient-to-r from-secondary-container to-secondary text-surface-container-lowest font-label-lg font-semibold flex items-center justify-center gap-2">
+        <div class="pt-3 flex flex-col gap-2">
+          <a href="https://rzp.io/rzp/8olG0p4" onclick="closeMobileMenu()" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-secondary-container to-secondary text-surface-container-lowest font-label-lg font-bold flex items-center justify-center gap-2 active:scale-95 transition-transform shadow-lg">
             <span>Book 1:1 Consultation (₹999)</span>
             <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
           </a>
-          <a href="/#pricing" onclick="closeMobileMenu()" class="w-full py-3 rounded-xl bg-surface-container-high text-on-surface font-label-lg flex items-center justify-center gap-2">
+          <a href="/" onclick="closeMobileMenu()" class="w-full py-3 rounded-xl bg-surface-container-high text-on-surface font-label-lg flex items-center justify-center gap-2 active:scale-95 transition-transform">
             <span>Back to Main Page</span>
             <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
           </a>
@@ -223,13 +227,13 @@
     </div>
   </header>
 
-  <main class="w-full pt-20 bg-surface flex-1" id="top">
+  <main class="w-full pt-16 sm:pt-20 bg-surface flex-1" id="top">
     <div class="flex flex-col w-full">
 
       <!-- =========================================================================
              HERO SECTION
              ========================================================================= -->
-      <section class="relative w-full overflow-hidden px-margin md:px-margin-md lg:px-margin-lg pt-space-xl lg:pt-space-2xl pb-space-2xl">
+      <section class="relative w-full overflow-hidden px-4 sm:px-6 lg:px-8 pt-8 sm:pt-space-xl lg:pt-space-2xl pb-10 sm:pb-space-2xl">
         <!-- Atmospheric Ambient Radiance -->
         <div class="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[550px] bg-gradient-to-b from-secondary-container/20 via-primary-container/10 to-transparent blur-[120px] rounded-full"></div>
         <div class="pointer-events-none absolute top-1/4 -right-40 w-[450px] h-[450px] bg-secondary/15 blur-[130px] rounded-full"></div>
@@ -237,42 +241,42 @@
         <div class="max-w-6xl mx-auto flex flex-col items-center text-center relative z-10">
           
           <!-- Eyebrow Pill -->
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary-container/30 border border-secondary/30 shadow-[0_0_15px_rgba(192,193,255,0.15)] mb-space-md">
+          <div class="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-secondary-container/30 border border-secondary/30 shadow-[0_0_15px_rgba(192,193,255,0.15)] mb-space-md">
             <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
-            <span class="font-label-mono text-xs uppercase tracking-widest text-secondary font-bold">1:1 AI AGENT CONSULTATION</span>
+            <span class="font-label-mono text-[11px] sm:text-xs uppercase tracking-widest text-secondary font-bold">1:1 AI AGENT CONSULTATION</span>
           </div>
 
           <!-- Headline -->
-          <h1 class="font-display-hero text-4xl sm:text-5xl lg:text-6xl font-bold text-on-surface tracking-tight leading-[1.1] max-w-4xl">
+          <h1 class="font-display-hero text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-on-surface tracking-tight leading-[1.14] sm:leading-[1.1] max-w-4xl">
             Build Your First AI Agent — <br class="hidden sm:inline" />
             <span class="bg-gradient-to-r from-white via-secondary to-primary bg-clip-text text-transparent">With Guidance</span>
           </h1>
 
           <!-- Description -->
-          <p class="font-body-lg text-base sm:text-lg text-on-surface-variant max-w-2xl leading-relaxed mt-space-md">
+          <p class="font-body-lg text-sm sm:text-base md:text-lg text-on-surface-variant max-w-2xl leading-relaxed mt-3 sm:mt-space-md px-2">
             Get a focused 1:1 session where we help you understand how AI can work for your business and guide you through setting up a basic AI agent.
           </p>
 
           <!-- Price & Badge Unit -->
-          <div class="mt-space-lg flex flex-col sm:flex-row items-center gap-space-md">
-            <div class="flex items-center gap-3 px-4 py-2 rounded-xl bg-surface-container-high/90 border border-secondary/30 shadow-inner">
-              <span class="font-label-mono text-xs font-semibold px-2 py-0.5 rounded bg-secondary-container/50 text-secondary uppercase tracking-wider">
+          <div class="mt-6 sm:mt-space-lg flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-space-md w-full sm:w-auto justify-center px-4 sm:px-0">
+            <div class="flex items-center justify-center gap-3 px-4 py-2.5 rounded-xl bg-surface-container-high/90 border border-secondary/30 shadow-inner">
+              <span class="font-label-mono text-[10px] sm:text-xs font-semibold px-2 py-0.5 rounded bg-secondary-container/50 text-secondary uppercase tracking-wider">
                 ONE-TIME • 1:1 SESSION
               </span>
               <div class="flex items-baseline gap-1">
-                <span class="font-display-hero text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-secondary to-tertiary">₹999</span>
-                <span class="font-label-mono text-[11px] text-on-surface-variant uppercase">INR</span>
+                <span class="font-display-hero text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-secondary to-tertiary">₹999</span>
+                <span class="font-label-mono text-[10px] sm:text-[11px] text-on-surface-variant uppercase">INR</span>
               </div>
             </div>
 
             <!-- Primary CTA: Razorpay Payment Link -->
-            <a href="https://rzp.io/rzp/8olG0p4" class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-xl py-3.5 rounded-xl bg-gradient-to-r from-secondary-container via-secondary to-tertiary text-surface-container-lowest font-label-lg font-bold shadow-[0_0_24px_rgba(192,193,255,0.3)] hover:shadow-[0_0_32px_rgba(192,193,255,0.5)] hover:scale-[1.01] transition-all duration-200">
+            <a href="https://rzp.io/rzp/8olG0p4" class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-6 sm:px-space-xl py-3.5 rounded-xl bg-gradient-to-r from-secondary-container via-secondary to-tertiary text-surface-container-lowest font-label-lg font-bold shadow-[0_0_24px_rgba(192,193,255,0.3)] hover:shadow-[0_0_32px_rgba(192,193,255,0.5)] active:scale-[0.98] transition-all duration-200">
               <span>Book 1:1 Consultation →</span>
             </a>
           </div>
 
           <!-- Micro-Trust Metrics -->
-          <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 pt-space-xl mt-space-md border-t border-surface-container-high/40 text-on-surface-variant font-label-mono text-xs">
+          <div class="flex flex-wrap items-center justify-center gap-x-4 sm:gap-x-6 gap-y-2 pt-6 sm:pt-space-xl mt-space-md border-t border-surface-container-high/40 text-on-surface-variant font-label-mono text-[11px] sm:text-xs px-2">
             <span class="flex items-center gap-1.5">
               <span class="material-symbols-outlined text-secondary text-[16px]">screen_share</span>
               Live 1:1 Screen Share
@@ -295,41 +299,49 @@
       <!-- =========================================================================
              VIDEO SECTION (Short Overview Placeholder)
              ========================================================================= -->
-      <section class="w-full px-margin md:px-margin-md lg:px-margin-lg py-space-2xl bg-surface-container-lowest/70 border-t border-b border-surface-container-high/40 relative" id="overview-video">
-        <div class="max-w-5xl mx-auto flex flex-col items-center text-center gap-space-lg">
+      <section class="w-full px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-space-2xl bg-surface-container-lowest/70 border-t border-b border-surface-container-high/40 relative" id="overview-video">
+        <div class="max-w-4xl mx-auto flex flex-col items-center text-center gap-6 sm:gap-space-lg">
           
-          <div class="max-w-2xl">
+          <div class="max-w-2xl px-2">
             <span class="font-label-mono text-label-mono tracking-widest uppercase text-secondary font-semibold">PREVIEW THE EXPERIENCE</span>
-            <h2 class="font-headline-xl text-3xl sm:text-headline-xl text-on-surface tracking-tight mt-1 mb-space-xs">
+            <h2 class="font-headline-xl text-2xl sm:text-3xl md:text-headline-xl text-on-surface tracking-tight mt-1 mb-space-xs">
               See What You'll Learn
             </h2>
-            <p class="font-body-md text-on-surface-variant leading-relaxed">
+            <p class="font-body-md text-sm sm:text-base text-on-surface-variant leading-relaxed">
               Before booking, watch this short overview to understand exactly what the consultation includes and how the session works.
             </p>
           </div>
 
-          <!-- 16:9 Consultation Video Container -->
-          <div class="w-full aspect-video rounded-2xl bg-black border border-slate-700/70 shadow-[0_16px_50px_rgba(0,0,0,0.85)] relative overflow-hidden group flex items-center justify-center">
-            <!-- Background Radial Glow Behind Video -->
-            <div class="absolute -top-24 -right-24 w-72 h-72 bg-primary/10 rounded-full blur-[80px] pointer-events-none"></div>
-            <div class="absolute -bottom-24 -left-24 w-72 h-72 bg-secondary/10 rounded-full blur-[80px] pointer-events-none"></div>
+          <!-- 9:16 Portrait Consultation Video Container -->
+          <div class="relative w-full max-w-[310px] sm:max-w-[340px] md:max-w-[370px] mx-auto">
+            <!-- Ambient Glow behind phone frame -->
+            <div class="pointer-events-none absolute -inset-3 sm:-inset-4 bg-gradient-to-tr from-secondary/30 via-primary/20 to-secondary/15 rounded-[2.5rem] sm:rounded-[3rem] blur-2xl opacity-80 -z-10"></div>
 
-            <video id="consultation-video" controls playsinline preload="metadata" class="w-full h-full object-contain bg-black rounded-2xl relative z-10 outline-none">
-              <source src="overview.mp4" type="video/mp4" />
-              <source src="1007%20(1)(1).mp4" type="video/mp4" />
-              <source src="/overview.mp4" type="video/mp4" />
-              <source src="../overview.mp4" type="video/mp4" />
-              <source src="../1007%20(1)(1).mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <!-- Video Meta Information Tag -->
-          <div class="flex items-center justify-between text-xs font-label-mono text-on-surface-variant px-1 -mt-2">
-            <span class="flex items-center gap-2">
-              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span>1:1 Consultation Walkthrough</span>
-            </span>
-            <span class="text-secondary/90">HD • Click Play to Watch</span>
+            <!-- Phone Bezel Container -->
+            <div class="relative rounded-[2.2rem] sm:rounded-[2.6rem] p-2 sm:p-2.5 bg-gradient-to-b from-surface-bright/50 via-surface-container-high/60 to-surface-container-lowest border border-slate-700/80 shadow-[0_20px_60px_rgba(0,0,0,0.95),0_0_40px_rgba(192,193,255,0.18)]">
+              
+              <!-- Aspect Ratio 9:16 Screen -->
+              <div class="w-full rounded-[1.8rem] sm:rounded-[2.2rem] overflow-hidden bg-black relative flex items-center justify-center shadow-inner" style="aspect-ratio: 9 / 16;">
+                <video id="consultation-video" controls playsinline preload="metadata" class="w-full h-full rounded-[1.8rem] sm:rounded-[2.2rem] relative z-10 outline-none" style="aspect-ratio: 9 / 16; width: 100%; height: 100%; object-fit: cover;">
+                  <source src="overview.mp4" type="video/mp4" />
+                  <source src="1007%20(1)(1).mp4" type="video/mp4" />
+                  <source src="/overview.mp4" type="video/mp4" />
+                  <source src="../overview.mp4" type="video/mp4" />
+                  <source src="../1007%20(1)(1).mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+
+            </div>
+
+            <!-- Video Meta Information Tag -->
+            <div class="flex items-center justify-between text-[11px] sm:text-xs font-label-mono text-on-surface-variant px-2 pt-3">
+              <span class="flex items-center gap-1.5 sm:gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>1:1 Consultation Walkthrough</span>
+              </span>
+              <span class="text-secondary font-semibold">9:16 HD</span>
+            </div>
           </div>
           <!-- END VIDEO CONTAINER -->
 
@@ -339,24 +351,24 @@
       <!-- =========================================================================
              WHAT HAPPENS IN THE 1:1 SESSION? (6 Feature Cards)
              ========================================================================= -->
-      <section class="w-full px-margin md:px-margin-md lg:px-margin-lg py-space-3xl relative" id="what-happens">
-        <div class="max-w-7xl mx-auto flex flex-col gap-space-2xl">
+      <section class="w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-space-3xl relative" id="what-happens">
+        <div class="max-w-7xl mx-auto flex flex-col gap-8 sm:gap-space-2xl">
           
           <div class="max-w-3xl">
             <span class="font-label-mono text-label-mono tracking-widest uppercase text-secondary font-semibold">SESSION BREAKDOWN</span>
-            <h2 class="font-headline-xl text-3xl sm:text-headline-xl text-on-surface tracking-tight mt-1 mb-space-xs">
+            <h2 class="font-headline-xl text-2xl sm:text-3xl md:text-headline-xl text-on-surface tracking-tight mt-1 mb-space-xs">
               What happens in the 1:1 session?
             </h2>
-            <p class="font-body-lg text-on-surface-variant leading-relaxed">
+            <p class="font-body-lg text-sm sm:text-base md:text-lg text-on-surface-variant leading-relaxed">
               This is a practical, focused session designed for business owners who want to understand and start using AI agents without immediately investing in a complete custom automation system.
             </p>
           </div>
 
           <!-- 6 Feature Cards Grid -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-space-lg">
             
             <!-- 01 Understand Your Use Case -->
-            <div class="rounded-2xl p-space-lg bg-surface-container-low border border-slate-700/40 shadow-lg flex flex-col justify-between group hover:-translate-y-1 transition-all duration-200">
+            <div class="rounded-2xl p-5 sm:p-space-lg bg-surface-container-low border border-slate-700/40 shadow-lg flex flex-col justify-between group hover:-translate-y-1 transition-all duration-200">
               <div class="flex flex-col gap-space-sm">
                 <div class="flex items-center justify-between">
                   <span class="font-label-mono text-2xl font-bold text-secondary">01</span>
@@ -364,15 +376,15 @@
                     <span class="material-symbols-outlined text-[20px]">psychology</span>
                   </div>
                 </div>
-                <h3 class="font-headline-md text-xl font-semibold text-on-surface">Understand Your Use Case</h3>
-                <p class="font-body-md text-on-surface-variant leading-relaxed">
+                <h3 class="font-headline-md text-lg sm:text-xl font-semibold text-on-surface">Understand Your Use Case</h3>
+                <p class="font-body-md text-sm sm:text-base text-on-surface-variant leading-relaxed">
                   Identify where an AI agent can actually help your business and pinpoint high-value customer interactions to automate.
                 </p>
               </div>
             </div>
 
             <!-- 02 Choose the Right Agent -->
-            <div class="rounded-2xl p-space-lg bg-surface-container-low border border-slate-700/40 shadow-lg flex flex-col justify-between group hover:-translate-y-1 transition-all duration-200">
+            <div class="rounded-2xl p-5 sm:p-space-lg bg-surface-container-low border border-slate-700/40 shadow-lg flex flex-col justify-between group hover:-translate-y-1 transition-all duration-200">
               <div class="flex flex-col gap-space-sm">
                 <div class="flex items-center justify-between">
                   <span class="font-label-mono text-2xl font-bold text-secondary">02</span>
@@ -380,15 +392,15 @@
                     <span class="material-symbols-outlined text-[20px]">smart_toy</span>
                   </div>
                 </div>
-                <h3 class="font-headline-md text-xl font-semibold text-on-surface">Choose the Right Agent</h3>
-                <p class="font-body-md text-on-surface-variant leading-relaxed">
+                <h3 class="font-headline-md text-lg sm:text-xl font-semibold text-on-surface">Choose the Right Agent</h3>
+                <p class="font-body-md text-sm sm:text-base text-on-surface-variant leading-relaxed">
                   Understand whether a Voice AI Agent, WhatsApp Agent or another solution makes sense for your specific audience.
                 </p>
               </div>
             </div>
 
             <!-- 03 Choose the Right Tool -->
-            <div class="rounded-2xl p-space-lg bg-surface-container-low border border-slate-700/40 shadow-lg flex flex-col justify-between group hover:-translate-y-1 transition-all duration-200">
+            <div class="rounded-2xl p-5 sm:p-space-lg bg-surface-container-low border border-slate-700/40 shadow-lg flex flex-col justify-between group hover:-translate-y-1 transition-all duration-200">
               <div class="flex flex-col gap-space-sm">
                 <div class="flex items-center justify-between">
                   <span class="font-label-mono text-2xl font-bold text-secondary">03</span>
@@ -396,15 +408,15 @@
                     <span class="material-symbols-outlined text-[20px]">handyman</span>
                   </div>
                 </div>
-                <h3 class="font-headline-md text-xl font-semibold text-on-surface">Choose the Right Tool</h3>
-                <p class="font-body-md text-on-surface-variant leading-relaxed">
+                <h3 class="font-headline-md text-lg sm:text-xl font-semibold text-on-surface">Choose the Right Tool</h3>
+                <p class="font-body-md text-sm sm:text-base text-on-surface-variant leading-relaxed">
                   Get guidance on selecting the right platform for your use case, budget, and internal technical capability.
                 </p>
               </div>
             </div>
 
             <!-- 04 Basic Agent Setup -->
-            <div class="rounded-2xl p-space-lg bg-surface-container-low border border-slate-700/40 shadow-lg flex flex-col justify-between group hover:-translate-y-1 transition-all duration-200">
+            <div class="rounded-2xl p-5 sm:p-space-lg bg-surface-container-low border border-slate-700/40 shadow-lg flex flex-col justify-between group hover:-translate-y-1 transition-all duration-200">
               <div class="flex flex-col gap-space-sm">
                 <div class="flex items-center justify-between">
                   <span class="font-label-mono text-2xl font-bold text-secondary">04</span>
@@ -412,15 +424,15 @@
                     <span class="material-symbols-outlined text-[20px]">terminal</span>
                   </div>
                 </div>
-                <h3 class="font-headline-md text-xl font-semibold text-on-surface">Basic Agent Setup</h3>
-                <p class="font-body-md text-on-surface-variant leading-relaxed">
+                <h3 class="font-headline-md text-lg sm:text-xl font-semibold text-on-surface">Basic Agent Setup</h3>
+                <p class="font-body-md text-sm sm:text-base text-on-surface-variant leading-relaxed">
                   Set up the foundation of a basic working AI agent through a screen-share walkthrough with credentials configured.
                 </p>
               </div>
             </div>
 
             <!-- 05 Prompt & Conversation Guidance -->
-            <div class="rounded-2xl p-space-lg bg-surface-container-low border border-slate-700/40 shadow-lg flex flex-col justify-between group hover:-translate-y-1 transition-all duration-200">
+            <div class="rounded-2xl p-5 sm:p-space-lg bg-surface-container-low border border-slate-700/40 shadow-lg flex flex-col justify-between group hover:-translate-y-1 transition-all duration-200">
               <div class="flex flex-col gap-space-sm">
                 <div class="flex items-center justify-between">
                   <span class="font-label-mono text-2xl font-bold text-secondary">05</span>
@@ -428,15 +440,15 @@
                     <span class="material-symbols-outlined text-[20px]">edit_note</span>
                   </div>
                 </div>
-                <h3 class="font-headline-md text-xl font-semibold text-on-surface">Prompt &amp; Conversation Guidance</h3>
-                <p class="font-body-md text-on-surface-variant leading-relaxed">
+                <h3 class="font-headline-md text-lg sm:text-xl font-semibold text-on-surface">Prompt &amp; Conversation Guidance</h3>
+                <p class="font-body-md text-sm sm:text-base text-on-surface-variant leading-relaxed">
                   Learn how to structure the agent's instructions, guardrails, business rules, and conversation flow without hallucinations.
                 </p>
               </div>
             </div>
 
             <!-- 06 Test & Improve -->
-            <div class="rounded-2xl p-space-lg bg-surface-container-low border border-slate-700/40 shadow-lg flex flex-col justify-between group hover:-translate-y-1 transition-all duration-200">
+            <div class="rounded-2xl p-5 sm:p-space-lg bg-surface-container-low border border-slate-700/40 shadow-lg flex flex-col justify-between group hover:-translate-y-1 transition-all duration-200">
               <div class="flex flex-col gap-space-sm">
                 <div class="flex items-center justify-between">
                   <span class="font-label-mono text-2xl font-bold text-secondary">06</span>
@@ -444,8 +456,8 @@
                     <span class="material-symbols-outlined text-[20px]">flaky</span>
                   </div>
                 </div>
-                <h3 class="font-headline-md text-xl font-semibold text-on-surface">Test &amp; Improve</h3>
-                <p class="font-body-md text-on-surface-variant leading-relaxed">
+                <h3 class="font-headline-md text-lg sm:text-xl font-semibold text-on-surface">Test &amp; Improve</h3>
+                <p class="font-body-md text-sm sm:text-base text-on-surface-variant leading-relaxed">
                   Test the agent with live test calls/prompts and understand what should be improved, monitored, and scaled next.
                 </p>
               </div>
@@ -459,16 +471,16 @@
       <!-- =========================================================================
              WHAT YOU WILL LEAVE WITH (Checklist Section)
              ========================================================================= -->
-      <section class="w-full px-margin md:px-margin-md lg:px-margin-lg py-space-3xl bg-surface-container-lowest/80 border-t border-b border-surface-container-high/40 relative" id="leave-with">
-        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-space-xl">
+      <section class="w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-space-3xl bg-surface-container-lowest/80 border-t border-b border-surface-container-high/40 relative" id="leave-with">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-stretch md:items-center gap-8 sm:gap-space-xl">
           
           <!-- Left Column Copy -->
           <div class="md:w-5/12 flex flex-col gap-space-sm text-left">
             <span class="font-label-mono text-label-mono tracking-widest uppercase text-secondary font-semibold">TANGIBLE OUTCOMES</span>
-            <h2 class="font-headline-xl text-3xl sm:text-headline-xl text-on-surface tracking-tight">
+            <h2 class="font-headline-xl text-2xl sm:text-3xl md:text-headline-xl text-on-surface tracking-tight">
               By the end of the session, you'll have:
             </h2>
-            <p class="font-body-md text-on-surface-variant leading-relaxed">
+            <p class="font-body-md text-sm sm:text-base text-on-surface-variant leading-relaxed">
               No theoretical lectures. You leave with practical assets, clear comprehension, and the immediate confidence to continue.
             </p>
             <div class="pt-2">
@@ -480,50 +492,50 @@
           </div>
 
           <!-- Right Column Checklist Card -->
-          <div class="md:w-7/12 w-full rounded-2xl p-space-xl bg-surface-container-low border border-secondary/30 shadow-xl relative overflow-hidden">
+          <div class="md:w-7/12 w-full rounded-2xl p-5 sm:p-7 md:p-space-xl bg-surface-container-low border border-secondary/30 shadow-xl relative overflow-hidden">
             <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-secondary-container via-secondary to-tertiary"></div>
             
-            <ul class="flex flex-col gap-space-md">
+            <ul class="flex flex-col gap-3 sm:gap-space-md">
               <li class="flex items-start gap-3">
                 <span class="w-6 h-6 rounded-full bg-secondary-container/40 text-secondary flex items-center justify-center shrink-0 mt-0.5 border border-secondary/30">
                   <span class="material-symbols-outlined text-[16px] font-bold">check</span>
                 </span>
-                <span class="font-body-md text-on-surface font-medium leading-snug">A clear AI use-case for your business</span>
+                <span class="font-body-md text-sm sm:text-base text-on-surface font-medium leading-snug">A clear AI use-case for your business</span>
               </li>
 
               <li class="flex items-start gap-3">
                 <span class="w-6 h-6 rounded-full bg-secondary-container/40 text-secondary flex items-center justify-center shrink-0 mt-0.5 border border-secondary/30">
                   <span class="material-symbols-outlined text-[16px] font-bold">check</span>
                 </span>
-                <span class="font-body-md text-on-surface font-medium leading-snug">Understanding of the right type of AI agent</span>
+                <span class="font-body-md text-sm sm:text-base text-on-surface font-medium leading-snug">Understanding of the right type of AI agent</span>
               </li>
 
               <li class="flex items-start gap-3">
                 <span class="w-6 h-6 rounded-full bg-secondary-container/40 text-secondary flex items-center justify-center shrink-0 mt-0.5 border border-secondary/30">
                   <span class="material-symbols-outlined text-[16px] font-bold">check</span>
                 </span>
-                <span class="font-body-md text-on-surface font-medium leading-snug">Basic working agent setup/guidance</span>
+                <span class="font-body-md text-sm sm:text-base text-on-surface font-medium leading-snug">Basic working agent setup/guidance</span>
               </li>
 
               <li class="flex items-start gap-3">
                 <span class="w-6 h-6 rounded-full bg-secondary-container/40 text-secondary flex items-center justify-center shrink-0 mt-0.5 border border-secondary/30">
                   <span class="material-symbols-outlined text-[16px] font-bold">check</span>
                 </span>
-                <span class="font-body-md text-on-surface font-medium leading-snug">Initial prompt structure</span>
+                <span class="font-body-md text-sm sm:text-base text-on-surface font-medium leading-snug">Initial prompt structure</span>
               </li>
 
               <li class="flex items-start gap-3">
                 <span class="w-6 h-6 rounded-full bg-secondary-container/40 text-secondary flex items-center justify-center shrink-0 mt-0.5 border border-secondary/30">
                   <span class="material-symbols-outlined text-[16px] font-bold">check</span>
                 </span>
-                <span class="font-body-md text-on-surface font-medium leading-snug">Understanding of how to test the agent</span>
+                <span class="font-body-md text-sm sm:text-base text-on-surface font-medium leading-snug">Understanding of how to test the agent</span>
               </li>
 
               <li class="flex items-start gap-3">
                 <span class="w-6 h-6 rounded-full bg-secondary-container/40 text-secondary flex items-center justify-center shrink-0 mt-0.5 border border-secondary/30">
                   <span class="material-symbols-outlined text-[16px] font-bold">check</span>
                 </span>
-                <span class="font-body-md text-on-surface font-medium leading-snug">A clear roadmap for the next step</span>
+                <span class="font-body-md text-sm sm:text-base text-on-surface font-medium leading-snug">A clear roadmap for the next step</span>
               </li>
             </ul>
           </div>
@@ -534,59 +546,59 @@
       <!-- =========================================================================
              WHAT THIS IS NOT (Scope Boundaries)
              ========================================================================= -->
-      <section class="w-full px-margin md:px-margin-md lg:px-margin-lg py-space-3xl relative">
-        <div class="max-w-4xl mx-auto rounded-2xl p-space-xl md:p-space-2xl bg-surface-container-low/90 border border-slate-700/60 shadow-2xl relative overflow-hidden">
+      <section class="w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-space-3xl relative">
+        <div class="max-w-4xl mx-auto rounded-2xl p-5 sm:p-7 md:p-space-2xl bg-surface-container-low/90 border border-slate-700/60 shadow-2xl relative overflow-hidden">
           
           <!-- Warning Badge Header -->
           <div class="flex items-center gap-space-xs mb-space-sm">
             <span class="material-symbols-outlined text-error text-[22px]">info</span>
-            <span class="font-label-mono text-label-mono text-error uppercase tracking-widest font-semibold">HONEST SCOPING</span>
+            <span class="font-label-mono text-[11px] sm:text-label-mono text-error uppercase tracking-widest font-semibold">HONEST SCOPING</span>
           </div>
 
           <!-- Headline -->
-          <h2 class="font-headline-xl text-2xl sm:text-headline-xl text-on-surface tracking-tight mb-space-xs">
+          <h2 class="font-headline-xl text-2xl sm:text-3xl md:text-headline-xl text-on-surface tracking-tight mb-space-xs">
             Important: What this consultation does NOT include
           </h2>
 
-          <p class="font-body-md text-on-surface-variant mb-space-xl leading-relaxed">
+          <p class="font-body-md text-sm sm:text-base text-on-surface-variant mb-6 sm:mb-space-xl leading-relaxed">
             This consultation is designed to help you get started — it is not a full custom automation service.
           </p>
 
           <!-- 6 Exclusions -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-space-md mb-space-xl">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-space-md mb-6 sm:mb-space-xl">
             <div class="flex items-start gap-space-sm">
               <span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5">cancel</span>
-              <span class="font-body-md text-on-surface-variant">Full custom automation development</span>
+              <span class="font-body-md text-sm sm:text-base text-on-surface-variant">Full custom automation development</span>
             </div>
             <div class="flex items-start gap-space-sm">
               <span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5">cancel</span>
-              <span class="font-body-md text-on-surface-variant">Complex CRM integrations</span>
+              <span class="font-body-md text-sm sm:text-base text-on-surface-variant">Complex CRM integrations</span>
             </div>
             <div class="flex items-start gap-space-sm">
               <span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5">cancel</span>
-              <span class="font-body-md text-on-surface-variant">Advanced multi-step workflows</span>
+              <span class="font-body-md text-sm sm:text-base text-on-surface-variant">Advanced multi-step workflows</span>
             </div>
             <div class="flex items-start gap-space-sm">
               <span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5">cancel</span>
-              <span class="font-body-md text-on-surface-variant">Complete business automation implementation</span>
+              <span class="font-body-md text-sm sm:text-base text-on-surface-variant">Complete business automation implementation</span>
             </div>
             <div class="flex items-start gap-space-sm">
               <span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5">cancel</span>
-              <span class="font-body-md text-on-surface-variant">Unlimited technical support</span>
+              <span class="font-body-md text-sm sm:text-base text-on-surface-variant">Unlimited technical support</span>
             </div>
             <div class="flex items-start gap-space-sm">
               <span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5">cancel</span>
-              <span class="font-body-md text-on-surface-variant">Building an entire automation system for you</span>
+              <span class="font-body-md text-sm sm:text-base text-on-surface-variant">Building an entire automation system for you</span>
             </div>
           </div>
 
           <!-- Full Setup Bridge Banner -->
-          <div class="p-space-md rounded-xl bg-surface-container border border-slate-700/50 flex flex-col sm:flex-row items-center justify-between gap-space-md">
+          <div class="p-4 sm:p-space-md rounded-xl bg-surface-container border border-slate-700/50 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 sm:gap-space-md">
             <div>
               <p class="font-headline-sm text-base sm:text-headline-sm font-semibold text-on-surface">Need a complete system built for you?</p>
-              <p class="font-body-sm text-on-surface-variant">If you need a complete AI automation system built for your business, you can enquire about our Full AI Agent Setup separately.</p>
+              <p class="font-body-sm text-xs sm:text-body-sm text-on-surface-variant">If you need a complete AI automation system built for your business, you can enquire about our Full AI Agent Setup separately.</p>
             </div>
-            <a href="/#solutions" class="inline-flex items-center gap-space-xs px-space-lg py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-primary border border-primary/30 font-label-lg font-semibold shrink-0 transition-all hover:scale-[1.01]">
+            <a href="/#solutions" class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-lg py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-primary border border-primary/30 font-label-lg font-semibold shrink-0 transition-all hover:scale-[1.01] active:scale-95 text-center">
               <span>Enquire About Full Setup →</span>
             </a>
           </div>
@@ -597,51 +609,51 @@
       <!-- =========================================================================
              WHO IS THIS FOR? (3 Audience Cards)
              ========================================================================= -->
-      <section class="w-full px-margin md:px-margin-md lg:px-margin-lg py-space-3xl bg-surface-container-lowest/60 border-t border-b border-surface-container-high/40" id="who-is-this-for">
-        <div class="max-w-7xl mx-auto flex flex-col gap-space-2xl">
+      <section class="w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-space-3xl bg-surface-container-lowest/60 border-t border-b border-surface-container-high/40" id="who-is-this-for">
+        <div class="max-w-7xl mx-auto flex flex-col gap-8 sm:gap-space-2xl">
           
           <div class="max-w-3xl">
             <span class="font-label-mono text-label-mono tracking-widest uppercase text-secondary font-semibold">TARGET AUDIENCE</span>
-            <h2 class="font-headline-xl text-3xl sm:text-headline-xl text-on-surface tracking-tight mt-1 mb-space-xs">
+            <h2 class="font-headline-xl text-2xl sm:text-3xl md:text-headline-xl text-on-surface tracking-tight mt-1 mb-space-xs">
               Who is this consultation for?
             </h2>
-            <p class="font-body-lg text-on-surface-variant leading-relaxed">
+            <p class="font-body-lg text-sm sm:text-base md:text-lg text-on-surface-variant leading-relaxed">
               Tailored for operators who want practical AI utility rather than complicated theory.
             </p>
           </div>
 
           <!-- 3 Audience Cards -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-space-lg">
             
             <!-- Business Owners -->
-            <div class="rounded-2xl p-space-xl bg-surface-container-low border border-slate-700/40 shadow-lg flex flex-col gap-space-sm group hover:-translate-y-1 transition-transform">
+            <div class="rounded-2xl p-5 sm:p-7 md:p-space-xl bg-surface-container-low border border-slate-700/40 shadow-lg flex flex-col gap-space-sm group hover:-translate-y-1 transition-transform">
               <div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-secondary border border-secondary/20 mb-space-xs">
                 <span class="material-symbols-outlined text-[26px]">storefront</span>
               </div>
-              <h3 class="font-headline-md text-xl font-semibold text-on-surface">Business Owners</h3>
-              <p class="font-body-md text-on-surface-variant leading-relaxed">
+              <h3 class="font-headline-md text-lg sm:text-xl font-semibold text-on-surface">Business Owners</h3>
+              <p class="font-body-md text-sm sm:text-base text-on-surface-variant leading-relaxed">
                 "For businesses exploring how AI can handle customer enquiries, leads and repetitive tasks."
               </p>
             </div>
 
             <!-- Local Businesses -->
-            <div class="rounded-2xl p-space-xl bg-surface-container-low border border-slate-700/40 shadow-lg flex flex-col gap-space-sm group hover:-translate-y-1 transition-transform">
+            <div class="rounded-2xl p-5 sm:p-7 md:p-space-xl bg-surface-container-low border border-slate-700/40 shadow-lg flex flex-col gap-space-sm group hover:-translate-y-1 transition-transform">
               <div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-secondary border border-secondary/20 mb-space-xs">
                 <span class="material-symbols-outlined text-[26px]">apartment</span>
               </div>
-              <h3 class="font-headline-md text-xl font-semibold text-on-surface">Local Businesses</h3>
-              <p class="font-body-md text-on-surface-variant leading-relaxed">
+              <h3 class="font-headline-md text-lg sm:text-xl font-semibold text-on-surface">Local Businesses</h3>
+              <p class="font-body-md text-sm sm:text-base text-on-surface-variant leading-relaxed">
                 "Restaurants, clinics, salons, real estate, education and other service businesses."
               </p>
             </div>
 
             <!-- Founders & Consultants -->
-            <div class="rounded-2xl p-space-xl bg-surface-container-low border border-slate-700/40 shadow-lg flex flex-col gap-space-sm group hover:-translate-y-1 transition-transform">
+            <div class="rounded-2xl p-5 sm:p-7 md:p-space-xl bg-surface-container-low border border-slate-700/40 shadow-lg flex flex-col gap-space-sm group hover:-translate-y-1 transition-transform">
               <div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-secondary border border-secondary/20 mb-space-xs">
                 <span class="material-symbols-outlined text-[26px]">psychology_alt</span>
               </div>
-              <h3 class="font-headline-md text-xl font-semibold text-on-surface">Founders &amp; Consultants</h3>
-              <p class="font-body-md text-on-surface-variant leading-relaxed">
+              <h3 class="font-headline-md text-lg sm:text-xl font-semibold text-on-surface">Founders &amp; Consultants</h3>
+              <p class="font-body-md text-sm sm:text-base text-on-surface-variant leading-relaxed">
                 "For people who want to understand how AI agents can improve their operations."
               </p>
             </div>
@@ -654,44 +666,44 @@
       <!-- =========================================================================
              HOW IT WORKS (4-Step Timeline)
              ========================================================================= -->
-      <section class="w-full px-margin md:px-margin-md lg:px-margin-lg py-space-3xl relative" id="how-it-works">
-        <div class="max-w-7xl mx-auto flex flex-col gap-space-2xl">
+      <section class="w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-space-3xl relative" id="how-it-works">
+        <div class="max-w-7xl mx-auto flex flex-col gap-8 sm:gap-space-2xl">
           
           <div class="text-center max-w-2xl mx-auto">
             <span class="font-label-mono text-label-mono tracking-widest uppercase text-secondary font-semibold">THE PROCESS</span>
-            <h2 class="font-headline-xl text-3xl sm:text-headline-xl text-on-surface tracking-tight mt-1">How It Works</h2>
-            <p class="font-body-md text-on-surface-variant">A straightforward 4-step sequence from booking to your working agent.</p>
+            <h2 class="font-headline-xl text-2xl sm:text-3xl md:text-headline-xl text-on-surface tracking-tight mt-1">How It Works</h2>
+            <p class="font-body-md text-sm sm:text-base text-on-surface-variant">A straightforward 4-step sequence from booking to your working agent.</p>
           </div>
 
           <!-- 4 Steps -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-space-md">
             
             <!-- 01 Book Your Session -->
-            <div class="rounded-2xl p-space-lg bg-surface-container-low border border-slate-700/40 shadow-md flex flex-col gap-space-xs group hover:-translate-y-1 transition-transform">
-              <span class="font-label-mono text-headline-md text-secondary font-bold uppercase tracking-wider">01</span>
-              <h3 class="font-headline-md text-lg font-semibold text-on-surface">Book Your Session</h3>
-              <p class="font-body-md text-on-surface-variant">Choose your preferred session time and complete the initial confirmation.</p>
+            <div class="rounded-2xl p-5 sm:p-space-lg bg-surface-container-low border border-slate-700/40 shadow-md flex flex-col gap-space-xs group hover:-translate-y-1 transition-transform">
+              <span class="font-label-mono text-xl sm:text-headline-md text-secondary font-bold uppercase tracking-wider">01</span>
+              <h3 class="font-headline-md text-base sm:text-lg font-semibold text-on-surface">Book Your Session</h3>
+              <p class="font-body-md text-sm text-on-surface-variant">Choose your preferred session time and complete the initial confirmation.</p>
             </div>
 
             <!-- 02 Tell Us About Your Business -->
-            <div class="rounded-2xl p-space-lg bg-surface-container-low border border-slate-700/40 shadow-md flex flex-col gap-space-xs group hover:-translate-y-1 transition-transform">
-              <span class="font-label-mono text-headline-md text-secondary font-bold uppercase tracking-wider">02</span>
-              <h3 class="font-headline-md text-lg font-semibold text-on-surface">Tell Us About Your Business</h3>
-              <p class="font-body-md text-on-surface-variant">Share your customer communication channels, enquiries, and target goals.</p>
+            <div class="rounded-2xl p-5 sm:p-space-lg bg-surface-container-low border border-slate-700/40 shadow-md flex flex-col gap-space-xs group hover:-translate-y-1 transition-transform">
+              <span class="font-label-mono text-xl sm:text-headline-md text-secondary font-bold uppercase tracking-wider">02</span>
+              <h3 class="font-headline-md text-base sm:text-lg font-semibold text-on-surface">Tell Us About Your Business</h3>
+              <p class="font-body-md text-sm text-on-surface-variant">Share your customer communication channels, enquiries, and target goals.</p>
             </div>
 
             <!-- 03 Join the 1:1 Session -->
-            <div class="rounded-2xl p-space-lg bg-surface-container-low border border-slate-700/40 shadow-md flex flex-col gap-space-xs group hover:-translate-y-1 transition-transform">
-              <span class="font-label-mono text-headline-md text-secondary font-bold uppercase tracking-wider">03</span>
-              <h3 class="font-headline-md text-lg font-semibold text-on-surface">Join the 1:1 Session</h3>
-              <p class="font-body-md text-on-surface-variant">Meet over a live screen-share call to architect and configure the agent.</p>
+            <div class="rounded-2xl p-5 sm:p-space-lg bg-surface-container-low border border-slate-700/40 shadow-md flex flex-col gap-space-xs group hover:-translate-y-1 transition-transform">
+              <span class="font-label-mono text-xl sm:text-headline-md text-secondary font-bold uppercase tracking-wider">03</span>
+              <h3 class="font-headline-md text-base sm:text-lg font-semibold text-on-surface">Join the 1:1 Session</h3>
+              <p class="font-body-md text-sm text-on-surface-variant">Meet over a live screen-share call to architect and configure the agent.</p>
             </div>
 
             <!-- 04 Build, Test & Understand -->
-            <div class="rounded-2xl p-space-lg bg-surface-container-low border border-slate-700/40 shadow-md flex flex-col gap-space-xs group hover:-translate-y-1 transition-transform">
-              <span class="font-label-mono text-headline-md text-secondary font-bold uppercase tracking-wider">04</span>
-              <h3 class="font-headline-md text-lg font-semibold text-on-surface">Build, Test &amp; Understand</h3>
-              <p class="font-body-md text-on-surface-variant">Test the agent with sample enquiries and leave with clear scaling steps.</p>
+            <div class="rounded-2xl p-5 sm:p-space-lg bg-surface-container-low border border-slate-700/40 shadow-md flex flex-col gap-space-xs group hover:-translate-y-1 transition-transform">
+              <span class="font-label-mono text-xl sm:text-headline-md text-secondary font-bold uppercase tracking-wider">04</span>
+              <h3 class="font-headline-md text-base sm:text-lg font-semibold text-on-surface">Build, Test &amp; Understand</h3>
+              <p class="font-body-md text-sm text-on-surface-variant">Test the agent with sample enquiries and leave with clear scaling steps.</p>
             </div>
 
           </div>
@@ -702,45 +714,45 @@
       <!-- =========================================================================
              PRICING SECTION
              ========================================================================= -->
-      <section class="w-full px-margin md:px-margin-md lg:px-margin-lg py-space-3xl bg-surface-container-lowest/80 border-t border-b border-surface-container-high/40 relative" id="pricing">
-        <div class="max-w-4xl mx-auto flex flex-col items-center text-center gap-space-xl">
+      <section class="w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-space-3xl bg-surface-container-lowest/80 border-t border-b border-surface-container-high/40 relative" id="pricing">
+        <div class="max-w-4xl mx-auto flex flex-col items-center text-center gap-8 sm:gap-space-xl">
           
           <div>
             <span class="font-label-mono text-label-mono tracking-widest uppercase text-secondary font-semibold">CLEAR PRICING</span>
-            <h2 class="font-headline-xl text-3xl sm:text-headline-xl text-on-surface tracking-tight mt-1 mb-space-xs">
+            <h2 class="font-headline-xl text-2xl sm:text-3xl md:text-headline-xl text-on-surface tracking-tight mt-1 mb-space-xs">
               Simple, Accessible Investment.
             </h2>
-            <p class="font-body-md text-on-surface-variant max-w-xl mx-auto">
+            <p class="font-body-md text-sm sm:text-base text-on-surface-variant max-w-xl mx-auto">
               Everything included in one focused session with zero ongoing commitments.
             </p>
           </div>
 
           <!-- Premium 1:1 Pricing Card -->
-          <div class="w-full max-w-2xl rounded-3xl p-space-xl md:p-space-2xl bg-surface-container-low border border-secondary/40 shadow-2xl relative overflow-hidden flex flex-col justify-between text-left group hover:border-secondary/70 transition-all">
+          <div class="w-full max-w-2xl rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-space-2xl bg-surface-container-low border border-secondary/40 shadow-2xl relative overflow-hidden flex flex-col justify-between text-left group hover:border-secondary/70 transition-all">
             <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-secondary-container via-secondary to-primary"></div>
             
             <div class="flex flex-col gap-space-md">
               <div class="flex items-center justify-between">
-                <span class="font-label-mono text-label-mono px-3 py-1 rounded-full bg-secondary-container/40 text-secondary border border-secondary/30 uppercase tracking-widest font-bold">
+                <span class="font-label-mono text-[10px] sm:text-label-mono px-3 py-1 rounded-full bg-secondary-container/40 text-secondary border border-secondary/30 uppercase tracking-widest font-bold">
                   ★ 1:1 DIRECT GUIDANCE
                 </span>
-                <span class="font-label-mono text-xs text-on-surface-variant uppercase tracking-wider">Live Screen-Share</span>
+                <span class="font-label-mono text-[11px] sm:text-xs text-on-surface-variant uppercase tracking-wider">Live Screen-Share</span>
               </div>
 
-              <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-space-xs pt-2">
+              <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 pt-2">
                 <div>
                   <h3 class="font-headline-lg text-2xl sm:text-3xl font-bold text-on-surface">1:1 AI Agent Consultation</h3>
-                  <span class="font-label-mono text-label-mono text-secondary uppercase tracking-wider font-semibold">One-time payment</span>
+                  <span class="font-label-mono text-xs sm:text-label-mono text-secondary uppercase tracking-wider font-semibold">One-time payment</span>
                 </div>
                 <div class="flex items-baseline gap-1.5">
-                  <span class="font-display-hero text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-secondary to-tertiary">₹999</span>
-                  <span class="font-label-mono text-sm text-on-surface-variant">INR</span>
+                  <span class="font-display-hero text-3xl sm:text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-secondary to-tertiary">₹999</span>
+                  <span class="font-label-mono text-xs sm:text-sm text-on-surface-variant">INR</span>
                 </div>
               </div>
 
               <div class="h-[1px] w-full bg-surface-container-high my-space-xs"></div>
 
-              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm font-body-md text-on-surface">
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-space-sm font-body-md text-sm sm:text-base text-on-surface">
                 <li class="flex items-center gap-space-xs">
                   <span class="material-symbols-outlined text-secondary text-[20px] shrink-0">check</span>
                   <span>1:1 focused session</span>
@@ -776,8 +788,8 @@
               </ul>
             </div>
 
-            <div class="pt-space-xl">
-              <a href="https://rzp.io/rzp/8olG0p4" class="w-full inline-flex items-center justify-center gap-space-xs py-4 px-space-md rounded-xl bg-gradient-to-r from-secondary-container via-secondary to-primary text-surface-container-lowest font-headline-sm text-base font-bold shadow-[0_0_24px_rgba(192,193,255,0.35)] hover:shadow-[0_0_36px_rgba(192,193,255,0.55)] hover:scale-[1.01] transition-all">
+            <div class="pt-6 sm:pt-space-xl">
+              <a href="https://rzp.io/rzp/8olG0p4" class="w-full inline-flex items-center justify-center gap-space-xs py-4 px-space-md rounded-xl bg-gradient-to-r from-secondary-container via-secondary to-primary text-surface-container-lowest font-headline-sm text-base font-bold shadow-[0_0_24px_rgba(192,193,255,0.35)] hover:shadow-[0_0_36px_rgba(192,193,255,0.55)] active:scale-[0.98] transition-all">
                 <span>Book 1:1 Consultation →</span>
               </a>
             </div>
@@ -789,30 +801,30 @@
       <!-- =========================================================================
              FINAL BOOKING SECTION (Conversion Section)
              ========================================================================= -->
-      <section class="w-full px-margin md:px-margin-md lg:px-margin-lg py-space-3xl relative" id="booking">
-        <div class="max-w-4xl mx-auto rounded-3xl p-space-xl md:p-space-3xl bg-surface-container-low border border-secondary/40 shadow-2xl relative overflow-hidden text-center flex flex-col items-center gap-space-lg">
+      <section class="w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-space-3xl relative" id="booking">
+        <div class="max-w-4xl mx-auto rounded-2xl sm:rounded-3xl p-6 sm:p-10 md:p-space-3xl bg-surface-container-low border border-secondary/40 shadow-2xl relative overflow-hidden text-center flex flex-col items-center gap-4 sm:gap-space-lg">
           
           <!-- Ambient light flare inside banner -->
           <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-96 h-96 bg-secondary-container/20 rounded-full blur-[100px] pointer-events-none"></div>
 
           <span class="font-label-mono text-label-mono uppercase tracking-widest text-secondary font-semibold">GET STARTED</span>
           
-          <h2 class="font-headline-xl text-3xl sm:text-4xl lg:text-5xl text-on-surface tracking-tight max-w-2xl leading-tight">
+          <h2 class="font-headline-xl text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-on-surface tracking-tight max-w-2xl leading-tight">
             Ready to explore AI for your business?
           </h2>
 
-          <p class="font-body-lg text-on-surface-variant max-w-xl leading-relaxed">
+          <p class="font-body-lg text-sm sm:text-base text-on-surface-variant max-w-xl leading-relaxed">
             Book a focused 1:1 session and get practical guidance on building your first AI agent.
           </p>
 
           <!-- Conversion Button: Direct to Razorpay Link -->
           <div class="pt-space-xs z-10 w-full sm:w-auto">
-            <a href="https://rzp.io/rzp/8olG0p4" id="book-primary-btn" class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-xl py-4 rounded-xl bg-gradient-to-r from-secondary-container via-secondary to-tertiary text-surface-container-lowest font-label-lg font-bold shadow-[0_0_24px_rgba(192,193,255,0.4)] hover:shadow-[0_0_36px_rgba(192,193,255,0.6)] hover:scale-[1.01] transition-all cursor-pointer">
+            <a href="https://rzp.io/rzp/8olG0p4" id="book-primary-btn" class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-6 sm:px-space-xl py-4 rounded-xl bg-gradient-to-r from-secondary-container via-secondary to-tertiary text-surface-container-lowest font-label-lg font-bold shadow-[0_0_24px_rgba(192,193,255,0.4)] hover:shadow-[0_0_36px_rgba(192,193,255,0.6)] active:scale-[0.98] transition-all cursor-pointer">
               <span>Book 1:1 Consultation — ₹999 →</span>
             </a>
           </div>
 
-          <p class="font-label-mono text-xs text-on-surface-variant z-10">
+          <p class="font-label-mono text-[11px] sm:text-xs text-on-surface-variant z-10">
             Secure booking slot • Direct screen-share walkthrough • Session recording provided
           </p>
 
@@ -822,93 +834,93 @@
       <!-- =========================================================================
              FAQ ACCORDION SECTION
              ========================================================================= -->
-      <section class="w-full px-margin md:px-margin-md lg:px-margin-lg py-space-3xl bg-surface-container-lowest/60 border-t border-surface-container-high/40 relative" id="faq">
-        <div class="max-w-4xl mx-auto flex flex-col gap-space-xl">
+      <section class="w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-space-3xl bg-surface-container-lowest/60 border-t border-surface-container-high/40 relative" id="faq">
+        <div class="max-w-4xl mx-auto flex flex-col gap-6 sm:gap-space-xl">
           
           <div class="text-center">
             <span class="font-label-mono text-label-mono tracking-widest uppercase text-secondary font-semibold">FREQUENTLY ASKED QUESTIONS</span>
-            <h2 class="font-headline-xl text-3xl sm:text-headline-xl text-on-surface tracking-tight mt-1 mb-space-xs">
+            <h2 class="font-headline-xl text-2xl sm:text-3xl md:text-headline-xl text-on-surface tracking-tight mt-1 mb-space-xs">
               Clear answers. Honest guidance.
             </h2>
-            <p class="font-body-md text-on-surface-variant">Everything you need to know about what to expect before booking.</p>
+            <p class="font-body-md text-sm sm:text-base text-on-surface-variant">Everything you need to know about what to expect before booking.</p>
           </div>
 
           <!-- Accordion Stack -->
-          <div class="flex flex-col gap-space-sm" id="faq-accordion">
+          <div class="flex flex-col gap-2.5 sm:gap-space-sm" id="faq-accordion">
             
             <!-- FAQ 1: Technical knowledge -->
             <div class="rounded-xl bg-surface-container-low border border-slate-700/50 overflow-hidden shadow-sm transition-all duration-200">
-              <button class="w-full p-space-lg flex items-center justify-between text-left font-headline-sm text-lg text-on-surface focus:outline-none hover:text-secondary transition-colors" onclick="toggleFaq(this)" type="button" aria-expanded="false">
+              <button class="w-full p-4 sm:p-space-lg flex items-center justify-between text-left font-headline-sm text-base sm:text-lg text-on-surface focus:outline-none hover:text-secondary transition-colors" onclick="toggleFaq(this)" type="button" aria-expanded="false">
                 <span>Do I need technical knowledge?</span>
                 <span class="material-symbols-outlined text-secondary text-[24px] transform transition-transform duration-200 shrink-0 ml-2">expand_more</span>
               </button>
-              <div class="faq-content hidden px-space-lg pb-space-lg font-body-md text-on-surface-variant leading-relaxed border-t border-surface-container-high/40 pt-3">
+              <div class="faq-content hidden px-4 sm:px-space-lg pb-4 sm:pb-space-lg font-body-md text-sm sm:text-base text-on-surface-variant leading-relaxed border-t border-surface-container-high/40 pt-3">
                 No technical background is required. The session is designed for business operators. We explain concepts in plain language and guide you through intuitive visual interfaces step-by-step.
               </div>
             </div>
 
             <!-- FAQ 2: Build complete agent -->
             <div class="rounded-xl bg-surface-container-low border border-slate-700/50 overflow-hidden shadow-sm transition-all duration-200">
-              <button class="w-full p-space-lg flex items-center justify-between text-left font-headline-sm text-lg text-on-surface focus:outline-none hover:text-secondary transition-colors" onclick="toggleFaq(this)" type="button" aria-expanded="false">
+              <button class="w-full p-4 sm:p-space-lg flex items-center justify-between text-left font-headline-sm text-base sm:text-lg text-on-surface focus:outline-none hover:text-secondary transition-colors" onclick="toggleFaq(this)" type="button" aria-expanded="false">
                 <span>Will you build the complete agent for me?</span>
                 <span class="material-symbols-outlined text-secondary text-[24px] transform transition-transform duration-200 shrink-0 ml-2">expand_more</span>
               </button>
-              <div class="faq-content hidden px-space-lg pb-space-lg font-body-md text-on-surface-variant leading-relaxed border-t border-surface-container-high/40 pt-3">
+              <div class="faq-content hidden px-4 sm:px-space-lg pb-4 sm:pb-space-lg font-body-md text-sm sm:text-base text-on-surface-variant leading-relaxed border-t border-surface-container-high/40 pt-3">
                 No. The 1:1 consultation is a focused learning and setup session where we build a basic working agent together. If you need complete done-for-you automation development, that is handled under our Full AI Agent Setup service.
               </div>
             </div>
 
             <!-- FAQ 3: Voice AI Agent -->
             <div class="rounded-xl bg-surface-container-low border border-slate-700/50 overflow-hidden shadow-sm transition-all duration-200">
-              <button class="w-full p-space-lg flex items-center justify-between text-left font-headline-sm text-lg text-on-surface focus:outline-none hover:text-secondary transition-colors" onclick="toggleFaq(this)" type="button" aria-expanded="false">
+              <button class="w-full p-4 sm:p-space-lg flex items-center justify-between text-left font-headline-sm text-base sm:text-lg text-on-surface focus:outline-none hover:text-secondary transition-colors" onclick="toggleFaq(this)" type="button" aria-expanded="false">
                 <span>Can we work on a Voice AI Agent?</span>
                 <span class="material-symbols-outlined text-secondary text-[24px] transform transition-transform duration-200 shrink-0 ml-2">expand_more</span>
               </button>
-              <div class="faq-content hidden px-space-lg pb-space-lg font-body-md text-on-surface-variant leading-relaxed border-t border-surface-container-high/40 pt-3">
+              <div class="faq-content hidden px-4 sm:px-space-lg pb-4 sm:pb-space-lg font-body-md text-sm sm:text-base text-on-surface-variant leading-relaxed border-t border-surface-container-high/40 pt-3">
                 Yes. If your priority is phone call answering or voice enquiry handling, we can configure and test a basic conversational Voice AI Agent during your session.
               </div>
             </div>
 
             <!-- FAQ 4: WhatsApp AI Agent -->
             <div class="rounded-xl bg-surface-container-low border border-slate-700/50 overflow-hidden shadow-sm transition-all duration-200">
-              <button class="w-full p-space-lg flex items-center justify-between text-left font-headline-sm text-lg text-on-surface focus:outline-none hover:text-secondary transition-colors" onclick="toggleFaq(this)" type="button" aria-expanded="false">
+              <button class="w-full p-4 sm:p-space-lg flex items-center justify-between text-left font-headline-sm text-base sm:text-lg text-on-surface focus:outline-none hover:text-secondary transition-colors" onclick="toggleFaq(this)" type="button" aria-expanded="false">
                 <span>Can we work on a WhatsApp AI Agent?</span>
                 <span class="material-symbols-outlined text-secondary text-[24px] transform transition-transform duration-200 shrink-0 ml-2">expand_more</span>
               </button>
-              <div class="faq-content hidden px-space-lg pb-space-lg font-body-md text-on-surface-variant leading-relaxed border-t border-surface-container-high/40 pt-3">
+              <div class="faq-content hidden px-4 sm:px-space-lg pb-4 sm:pb-space-lg font-body-md text-sm sm:text-base text-on-surface-variant leading-relaxed border-t border-surface-container-high/40 pt-3">
                 Yes. We can structure and walk through setting up a WhatsApp flow for automated customer replies, FAQs, and inbound lead qualification.
               </div>
             </div>
 
             <!-- FAQ 5: What tools -->
             <div class="rounded-xl bg-surface-container-low border border-slate-700/50 overflow-hidden shadow-sm transition-all duration-200">
-              <button class="w-full p-space-lg flex items-center justify-between text-left font-headline-sm text-lg text-on-surface focus:outline-none hover:text-secondary transition-colors" onclick="toggleFaq(this)" type="button" aria-expanded="false">
+              <button class="w-full p-4 sm:p-space-lg flex items-center justify-between text-left font-headline-sm text-base sm:text-lg text-on-surface focus:outline-none hover:text-secondary transition-colors" onclick="toggleFaq(this)" type="button" aria-expanded="false">
                 <span>What tools will we use?</span>
                 <span class="material-symbols-outlined text-secondary text-[24px] transform transition-transform duration-200 shrink-0 ml-2">expand_more</span>
               </button>
-              <div class="faq-content hidden px-space-lg pb-space-lg font-body-md text-on-surface-variant leading-relaxed border-t border-surface-container-high/40 pt-3">
+              <div class="faq-content hidden px-4 sm:px-space-lg pb-4 sm:pb-space-lg font-body-md text-sm sm:text-base text-on-surface-variant leading-relaxed border-t border-surface-container-high/40 pt-3">
                 We select the platform best suited to your goals and budget. Common tools include developer platforms like Vapi, Retell, Make.com, OpenAI APIs, and dedicated WhatsApp automation systems.
               </div>
             </div>
 
             <!-- FAQ 6: How long is consultation -->
             <div class="rounded-xl bg-surface-container-low border border-slate-700/50 overflow-hidden shadow-sm transition-all duration-200">
-              <button class="w-full p-space-lg flex items-center justify-between text-left font-headline-sm text-lg text-on-surface focus:outline-none hover:text-secondary transition-colors" onclick="toggleFaq(this)" type="button" aria-expanded="false">
+              <button class="w-full p-4 sm:p-space-lg flex items-center justify-between text-left font-headline-sm text-base sm:text-lg text-on-surface focus:outline-none hover:text-secondary transition-colors" onclick="toggleFaq(this)" type="button" aria-expanded="false">
                 <span>How long is the consultation?</span>
                 <span class="material-symbols-outlined text-secondary text-[24px] transform transition-transform duration-200 shrink-0 ml-2">expand_more</span>
               </button>
-              <div class="faq-content hidden px-space-lg pb-space-lg font-body-md text-on-surface-variant leading-relaxed border-t border-surface-container-high/40 pt-3">
+              <div class="faq-content hidden px-4 sm:px-space-lg pb-4 sm:pb-space-lg font-body-md text-sm sm:text-base text-on-surface-variant leading-relaxed border-t border-surface-container-high/40 pt-3">
                 Each consultation is a focused 60-minute 1:1 screen-share session. We send you the full recording and prompt templates right after the call.
               </div>
             </div>
 
             <!-- FAQ 7: Full automation later -->
             <div class="rounded-xl bg-surface-container-low border border-slate-700/50 overflow-hidden shadow-sm transition-all duration-200">
-              <button class="w-full p-space-lg flex items-center justify-between text-left font-headline-sm text-lg text-on-surface focus:outline-none hover:text-secondary transition-colors" onclick="toggleFaq(this)" type="button" aria-expanded="false">
+              <button class="w-full p-4 sm:p-space-lg flex items-center justify-between text-left font-headline-sm text-base sm:text-lg text-on-surface focus:outline-none hover:text-secondary transition-colors" onclick="toggleFaq(this)" type="button" aria-expanded="false">
                 <span>Can I get a full automation setup later?</span>
                 <span class="material-symbols-outlined text-secondary text-[24px] transform transition-transform duration-200 shrink-0 ml-2">expand_more</span>
               </button>
-              <div class="faq-content hidden px-space-lg pb-space-lg font-body-md text-on-surface-variant leading-relaxed border-t border-surface-container-high/40 pt-3">
+              <div class="faq-content hidden px-4 sm:px-space-lg pb-4 sm:pb-space-lg font-body-md text-sm sm:text-base text-on-surface-variant leading-relaxed border-t border-surface-container-high/40 pt-3">
                 Yes. If after the consultation you decide you want EvoScale to build, integrate, and maintain your system end-to-end, you can smoothly transition into our Full AI Agent Setup.
               </div>
             </div>
@@ -925,15 +937,15 @@
        FOOTER
        ========================================================================= -->
   <footer class="w-full bg-surface-container-lowest border-t border-surface-container-high/60">
-    <div class="max-w-7xl mx-auto px-margin md:px-margin-md lg:px-margin-lg py-space-2xl">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl pb-space-xl border-b border-surface-container-high/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-space-2xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-space-xl pb-8 sm:pb-space-xl border-b border-surface-container-high/40">
         
         <!-- Brand Info -->
         <div class="flex flex-col gap-space-sm">
           <a class="flex items-center" href="/">
-            <img src="/logo.png" alt="evoScale AI" class="h-9 w-auto object-contain" />
+            <img src="/logo.png" alt="evoScale AI" class="h-8 sm:h-9 w-auto object-contain" />
           </a>
-          <p class="font-body-sm text-on-surface-variant leading-relaxed">
+          <p class="font-body-sm text-sm text-on-surface-variant leading-relaxed">
             Empowering businesses with intelligent AI voice and messaging agents to scale operations and capture every customer opportunity.
           </p>
           <p class="font-label-mono text-[11px] text-on-surface-variant tracking-wider uppercase">AI • Automation • Business Systems</p>
@@ -942,7 +954,7 @@
         <!-- Quick Links -->
         <div class="flex flex-col gap-space-xs">
           <span class="font-label-md text-on-surface uppercase tracking-wider font-semibold mb-space-xs">Solutions</span>
-          <a class="font-body-sm text-on-surface-variant hover:text-primary transition-colors" href="/#solutions">Full AI Agent Setup (₹6,000)</a>
+          <a class="font-body-sm text-on-surface-variant hover:text-primary transition-colors" href="https://wa.me/917057603460?text=Hi%20Shivam%2C%20I%20am%20interested%20in%20the%20Full%20AI%20Agent%20Setup%20(₹6%2C000)." target="_blank" rel="noopener noreferrer">Full AI Agent Setup (₹6,000)</a>
           <a class="font-body-sm text-primary transition-colors font-medium" href="#top">1:1 AI Consultation (₹999)</a>
           <a class="font-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#what-happens">What's Included</a>
           <a class="font-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#who-is-this-for">Target Industries</a>
@@ -955,13 +967,13 @@
           <a class="font-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#pricing">Pricing (₹999)</a>
           <a class="font-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#how-it-works">How It Works</a>
           <a class="font-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#faq">FAQ</a>
-          <a class="font-body-sm text-on-surface-variant hover:text-primary transition-colors" href="/#solutions">Full Setup Details</a>
+          <a class="font-body-sm text-on-surface-variant hover:text-primary transition-colors" href="https://wa.me/917057603460?text=Hi%20Shivam!%20I%20have%20an%20enquiry%20regarding%20EvoScale." target="_blank" rel="noopener noreferrer">WhatsApp Direct (+91 7057603460)</a>
         </div>
 
         <!-- Transparency -->
         <div class="flex flex-col gap-space-xs">
           <span class="font-label-md text-on-surface uppercase tracking-wider font-semibold mb-space-xs">Transparency</span>
-          <p class="font-body-sm text-on-surface-variant leading-relaxed">
+          <p class="font-body-sm text-sm text-on-surface-variant leading-relaxed">
             Our 1:1 sessions provide honest guidance, zero jargon, and practical setups designed to deliver tangible ROI.
           </p>
           <div class="pt-2">
@@ -975,17 +987,34 @@
       </div>
 
       <!-- Bottom Bar -->
-      <div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md">
-        <p class="font-body-sm text-on-surface-variant text-center sm:text-left">
+      <div class="pt-6 sm:pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-space-md">
+        <p class="font-body-sm text-xs sm:text-sm text-on-surface-variant text-center sm:text-left">
           © 2026 EvoScale AI. All rights reserved.
         </p>
         <div class="flex items-center gap-space-sm">
           <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
-          <span class="font-label-mono text-label-mono text-on-surface-variant uppercase">Consultation Desk Online</span>
+          <span class="font-label-mono text-[11px] sm:text-label-mono text-on-surface-variant uppercase">Consultation Desk Online</span>
         </div>
       </div>
     </div>
   </footer>
+
+  <!-- =========================================================================
+       MOBILE FLOATING QUICK ACTION BAR
+       ========================================================================= -->
+  <div id="mobile-floating-bar" class="sm:hidden fixed bottom-3 left-3 right-3 z-40 bg-surface-container-high/95 backdrop-blur-xl border border-secondary/40 rounded-2xl p-2.5 px-4 shadow-[0_10px_30px_rgba(0,0,0,0.8)] flex items-center justify-between gap-3">
+    <div class="flex flex-col">
+      <span class="text-[10px] font-label-mono uppercase tracking-wider text-secondary font-bold">1:1 Session Slot</span>
+      <div class="flex items-baseline gap-1">
+        <span class="text-base font-bold text-white font-display-hero">₹999</span>
+        <span class="text-[10px] text-on-surface-variant font-label-mono">one-time</span>
+      </div>
+    </div>
+    <a href="https://rzp.io/rzp/8olG0p4" class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-secondary-container via-secondary to-tertiary text-surface-container-lowest text-xs font-bold font-label-lg shadow-md active:scale-95 transition-all flex items-center gap-1">
+      <span>Book Now</span>
+      <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+    </a>
+  </div>
 
   <!-- =========================================================================
        PLACEHOLDER BOOKING MODAL (No Razorpay yet as specified)
